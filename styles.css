@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  padding-top: 20px;
+}
+
+.download-all {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.download-all:hover {
+  background-color: #0056b3;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-img {
+  max-width: 280px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+.download-btn:hover {
+  background-color: #1e7e34;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 48px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile Responsive Improvements */
+@media (max-width: 768px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 10px;
+  }
+
+  .image-container {
+    width: 90%;
+    max-width: 320px;
+  }
+
+  .gallery-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .download-btn {
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+
+  .download-all {
+    width: 90%;
+    max-width: 320px;
+    font-size: 1.1em;
+    padding: 14px 0;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+    padding: 15px 10px;
+  }
+
+  .close {
+    font-size: 36px;
+    top: 20px;
+    right: 25px;
+  }
+}
